@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Angular_App">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular Code by Joseph</title>
+  <link rel="stylesheet" href="./Angular_styles.css">
+
+  <!-- Angular Scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./Angular_logic.js"></script>
+</head>
+
+<body ng-controller="ControllerMaster1">
+
+
+  <textarea name="name" rows="8" cols="80" ng-model="newComment.comment" placeholder="comment"></textarea>
+
+  <br>
+
+  <input type="text" name="name" ng-model="newComment.username" placeholder="username">
+
+  <br>
+
+  <input type="number" ng-model="newComment.id_user" placeholder="id_user">
+
+  <button type="button" name="button" ng-click="addComment()">Add Comment</button>
+
+  <h3>Comentarios</h3>
+
+  <ul>
+    <li ng-repeat="comment in comments">
+      {{comment.comment}} - <strong>
+        {{comment.username}}
+      </strong> - <i>{{comment.id_user}}</i>
+    </li>
+
+  </ul>
+
+
+
+</body>
+
+</html>
