@@ -1,2 +1,2 @@
-# Angular.js-files
-Practice with Angular.js
+# Angular files
+Practice with Angular
