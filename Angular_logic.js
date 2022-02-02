@@ -10,10 +10,12 @@ let app = angular.module("Angular_App", [])
 
 //declaracion del Controlador
 
-app.controller("ControllerMaster1",["$scope" ,function($) {
-  $.name= "Joseph";
-  $.newComment= {}
-  $.comments= [
+app.controller("ControllerMaster1", ["$scope", function ($) {
+$.name= "Joseph";
+
+$.newComment= {}
+
+$.comments= [
 
     {
       comment: "excelent tutorial",
@@ -26,14 +28,30 @@ app.controller("ControllerMaster1",["$scope" ,function($) {
       username: "var_02",
       id_user: 25
     }
-  
+
   ]
 
   $.addComment = function () {
     $.comments.push($.newComment);
     $.newComment= {};
-  }
+  };
+
+  //
 }]);
+
+/*
+$http.get("https://jsonplaceholder.typicode.com/posts")
+    .success(function(data){
+      console.log(data);
+      $scope.posts = data;
+    })
+    .error(function(err) {
+
+    });
+
+$scope.posts = [];
+
+*/
 
 /*
 % Angular es MVVM (Modelo-Vista-Vista-Modelo)
