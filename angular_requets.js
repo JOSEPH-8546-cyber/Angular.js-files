@@ -1,5 +1,5 @@
 //declaracion del modulos
-
+/*
 angular.module("Angular_app_request", [])
   .controller("ControllerMaster2",  function($scope, $http) {
     $scope.posts = [];
@@ -30,3 +30,4 @@ $scope.addPost = function () {
 
 
   });
+*/
