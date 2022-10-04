@@ -8,62 +8,35 @@
   <title>Angular Code by Joseph</title>
   <link rel="stylesheet" href="./Angular_styles.css">
 
-  <!-- Angular Scripts -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
-  <script src="./Angular_logic.js"></script>
-
-
 
 </head>
 
-<body ng-controller="ControllerMaster1">
+<!-- Angular Scripts -->
 
 
-  <textarea name="name" rows="8" cols="80" ng-model="newComment.comment" placeholder="comment"></textarea>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-  <br>
-
-  <input type="text" name="name" ng-model="newComment.username" placeholder="username">
-
-  <br>
-
-  <input type="number" ng-model="newComment.id_user" placeholder="id_user">
-
-  <button type="button" name="button" ng-click="addComment()">Add Comment</button>
-
-  <h3>Comentarios</h3>
-
-  <ul>
-    <li ng-repeat="comment in comments">
-      {{comment.comment}} - <strong>
-        {{comment.username}}
-      </strong> - <i>{{comment.id_user}}</i>
-    </li>
-
-  </ul>
-
-<ul>
+<div ng-app="">
+    <p> Your Name:  <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p><br>
+    <p>{{name}}</p>
+<div>
+  <form ng-app="" name="myForm">
+    Email:
+    <input type="text" name="myAddress" ng-model="text" placeholder="example@">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid email address</span>
+  </form>
+</div>
 
 
-
-
-
+</div>
 <!--
-  <li ng-repeat="posts in posts">
-    <h1>
-      {{posts.title}}
-    </h1>
-    <p>
-      {{posts.body}}
-    </p>
-  </li>
-
-</ul>
-
+<div ng.app="myApp" ng-controller="myCtrl">
+  Name: <input type="text" ng-model="name">
+</div>
 -->
-
+  <script src="./angular-jp.js"></script>
 </body>
 
 </html>
